@@ -7,13 +7,19 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "stryker": "cross-env VUE_CLI_BABEL_TARGET_NODE=true VUE_CLI_BABEL_TRANSPILE_MODULES=true stryker run"
   },
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.6"
   },
   "devDependencies": {
+    "@stryker-mutator/core": "^1.2.0",
+    "@stryker-mutator/html-reporter": "^1.2.0",
+    "@stryker-mutator/javascript-mutator": "^1.2.0",
+    "@stryker-mutator/jest-runner": "^1.2.0",
+    "@stryker-mutator/vue-mutator": "^1.2.0",
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-e2e-nightwatch": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
@@ -24,6 +30,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "cross-env": "^5.2.0",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
     "less": "^3.0.4",
